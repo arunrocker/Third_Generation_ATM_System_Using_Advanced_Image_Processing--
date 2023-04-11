@@ -40,17 +40,18 @@ STEP 3 : Download anaconda 3 and configure it to your system
 
 STEP 4 : Copy the source code to a new folder(eg: atm-code)
 
-STEP 5 : Create a new folder inside the atm-code folder and name it as weights
+STEP 5 : Create a new folder inside the atm-code folder and name it as users and one more datasets
 
-STEP 6 : Open Anaconda Prompt and change the directory to the weights folder(eg: cd C/Users/Desktop/atm-code)
+STEP 6 : Open Anaconda Prompt and change the directory to the users folder(eg: cd C/Users/Desktop/atm-code)
 
 STEP 7 : Create another folder inside atm-code and name it as create users to store user data
 
-STEP 8 : Inside data store the image that you want to  and it should be in .mp4 format(eg: 1.mp4)
+STEP 8 : Inside data store the image that you want to  and it should be in jpg format(eg: 1.jpg)
 
 STEP 9 : Running the project:
 		-> Open Anaconda prompt and change the directory to the Human-Rescue folder
-			# cd C/Users/Desktop/Human-Rescue
+			# cd C/Users/Desktop/atm-code
 		-> Then type the run command with the input you want detect
-			# python detect_result.py --source data/1.mp4 --weights weights/drone_survivor.pt --classes 0 --project ui_test --img 3840
-				NOTE : *data/1.mp4 refers to the input vide0
+			Run python create_data.py for registrating the user's data
+				NOTE : *data/1.jpg refers to the input video which has been converted to jpg
+		->To use face detection run command python face_recognize.py to detect the user whether he is authenthicated or not.
